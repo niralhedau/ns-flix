@@ -21,33 +21,33 @@ const RootStyle = styled("div")(() => ({
   overflow: "inherit",
 }));
 
-const StyledSlider = styled(Slider)(
-  ({ theme, padding }: { theme: Theme; padding: number }) => ({
-    display: "flex !important",
-    justifyContent: "center",
-    overflow: "initial !important",
+const StyledSlider = styled(Slider, {
+  shouldForwardProp: (prop) => prop !== "padding",
+})<{ padding: number }>(({ theme, padding }) => ({
+  display: "flex !important",
+  justifyContent: "center",
+  overflow: "initial !important",
+  "& > .slick-list": {
+    overflow: "visible",
+  },
+  [theme.breakpoints.up("sm")]: {
     "& > .slick-list": {
-      overflow: "visible",
+      width: `calc(100% - ${2 * padding}px)`,
     },
-    [theme.breakpoints.up("sm")]: {
-      "& > .slick-list": {
-        width: `calc(100% - ${2 * padding}px)`,
-      },
-      "& .slick-list > .slick-track": {
-        margin: "0px !important",
-      },
-      "& .slick-list > .slick-track > .slick-current > div > .NetflixBox-root > .NetflixPaper-root:hover":
-        {
-          transformOrigin: "0% 50% !important",
-        },
+    "& .slick-list > .slick-track": {
+      margin: "0px !important",
     },
-    [theme.breakpoints.down("sm")]: {
-      "& > .slick-list": {
-        width: `calc(100% - ${padding}px)`,
-      },
+    "& .slick-list > .slick-track > .slick-current > div > .NetflixBox-root > .NetflixPaper-root:hover":
+    {
+      transformOrigin: "0% 50% !important",
     },
-  })
-);
+  },
+  [theme.breakpoints.down("sm")]: {
+    "& > .slick-list": {
+      width: `calc(100% - ${padding}px)`,
+    },
+  },
+}));
 
 interface SlideItemProps {
   item: Movie;
@@ -67,11 +67,11 @@ interface SlickSliderProps {
   handleNext: (page: number) => void;
 }
 export default function SlickSlider({ data, genre }: SlickSliderProps) {
-  const sliderRef = useRef<Slider>(null);
+  const sliderRef = useRef<any>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [showExplore, setShowExplore] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
-  const theme = useTheme();
+  // const theme = useTheme();
 
   const beforeChange = async (currentIndex: number, nextIndex: number) => {
     if (currentIndex < nextIndex) {
@@ -148,9 +148,8 @@ export default function SlickSlider({ data, genre }: SlickSliderProps) {
           >
             <NetflixNavigationLink
               variant="h5"
-              to={`/genre/${
-                genre.id || genre.name.toLowerCase().replace(" ", "_")
-              }`}
+              to={`/genre/${genre.id || genre.name.toLowerCase().replace(" ", "_")
+                }`}
               sx={{
                 display: "inline-block",
                 fontWeight: 700,
@@ -189,7 +188,6 @@ export default function SlickSlider({ data, genre }: SlickSliderProps) {
                 ref={sliderRef}
                 {...settings}
                 padding={ARROW_MAX_WIDTH}
-                theme={theme}
               >
                 {data.results
                   .filter((i) => !!i.backdrop_path)
