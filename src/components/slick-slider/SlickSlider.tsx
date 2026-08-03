@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, ComponentType  } from "react";
 import Slider, { Settings } from "react-slick";
 import { motion } from "framer-motion";
 
@@ -21,7 +21,7 @@ const RootStyle = styled("div")(() => ({
   overflow: "inherit",
 }));
 
-const StyledSlider = styled(Slider, {
+const StyledSlider = styled(Slider as ComponentType<any>, {
   shouldForwardProp: (prop) => prop !== "padding",
 })<{ padding: number }>(({ theme, padding }) => ({
   display: "flex !important",
@@ -38,9 +38,9 @@ const StyledSlider = styled(Slider, {
       margin: "0px !important",
     },
     "& .slick-list > .slick-track > .slick-current > div > .NetflixBox-root > .NetflixPaper-root:hover":
-    {
-      transformOrigin: "0% 50% !important",
-    },
+      {
+        transformOrigin: "0% 50% !important",
+      },
   },
   [theme.breakpoints.down("sm")]: {
     "& > .slick-list": {
