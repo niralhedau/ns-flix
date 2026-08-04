@@ -21,7 +21,7 @@ const RootStyle = styled("div")(() => ({
   overflow: "inherit",
 }));
 
-const StyledSlider = styled(Slider as ComponentType<any>, {
+const StyledSlider = styled(Slider as unknown as React.ComponentType<any>, {
   shouldForwardProp: (prop) => prop !== "padding",
 })<{ padding: number }>(({ theme, padding }) => ({
   display: "flex !important",
