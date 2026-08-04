@@ -59,7 +59,7 @@ const MainHeader = () => {
       }}
     >
       <Toolbar disableGutters>
-        <Logo sx={{ mr: { xs: 2, sm: 4 } }} />
+        <Logo sx={{ mr: { xs: 2, sm: 4 },mt:{xs:2} }} />
 
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
           <IconButton

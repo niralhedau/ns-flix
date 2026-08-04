@@ -9,9 +9,13 @@ export default function Logo({ sx }: BoxProps) {
         component="img"
         alt="Netflix Logo"
         src="/assets/netflix-logo.png"
-        width={87}
-        height={25}
+        // width={87}
+        // height={25}
         sx={{
+          width:195,
+          height:130,
+          objectFit:"contain",
+          display:"block",
           ...sx,
         }}
       />
