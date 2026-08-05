@@ -1,4 +1,4 @@
-# 🎬 Nsflix - Netflix Clone (DevSecOps CI/CD Pipeline)
+# 🎬 Nsflix (DevSecOps CI/CD Pipeline)
 
 ![GitHub](https://img.shields.io/badge/DevSecOps-CI%2FCD-blue)
 ![Docker](https://img.shields.io/badge/Docker-Container-blue)
