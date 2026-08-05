@@ -45,8 +45,6 @@ This project demonstrates an end-to-end DevSecOps implementation where every cod
 
 ## Architecture Diagram
 
-> Replace this image with your architecture diagram.
-
 ![Architecture](images/architecture.png)
 
 ---
