@@ -105,85 +105,50 @@ Developer
 
 # 📌 Project Workflow
 
-### 1️⃣ Developer pushes code to GitHub
+###  Developer pushes code to GitHub
 
 ![GitHub](images/github.png)
 
 ---
 
-### 2️⃣ Jenkins automatically triggers the pipeline
+###  Jenkins automatically triggers the pipeline
 
 ![Jenkins Dashboard](images/jenkins-dashboard.png)
 
 ---
 
-### 3️⃣ Jenkins Pipeline Execution
 
-![Pipeline](images/pipeline.png)
-
----
-
-### 4️⃣ SonarQube Code Analysis
+###  SonarQube Code Analysis
 
 ![SonarQube](images/sonarqube.png)
 
 ---
 
-### 5️⃣ OWASP Dependency Check Report
+###  Jenkins Pipeline Build
 
-![OWASP](images/owasp.png)
-
----
-
-### 6️⃣ Docker Image Build
-
-![Docker Build](images/docker-build.png)
+![Docker Build](images/pipeline-build.png)
 
 ---
 
-### 7️⃣ Trivy Vulnerability Scan
-
-![Trivy](images/trivy.png)
-
----
-
-### 8️⃣ DockerHub Image
-
-![DockerHub](images/dockerhub.png)
-
----
-
-### 9️⃣ Kubernetes Deployment
-
-![Kubernetes Pods](images/kubernetes-pods.png)
-
----
-
-### 🔟 Kubernetes Services
-
-![Services](images/kubernetes-service.png)
-
----
-
-### 1️⃣1️⃣ Nsflix Application
+###  Nsflix Application
 
 ![Homepage](images/homepage.png)
 
 ---
 
-### 1️⃣2️⃣ Movie Details Page
+###  Movie Details Page
 
 ![Movie Page](images/movie-page.png)
 
 ---
 
-### 1️⃣3️⃣ Prometheus Monitoring
+###  Prometheus Monitoring
 
 ![Prometheus](images/prometheus.png)
 
 ---
 
-### 1️⃣4️⃣ Grafana Dashboard
+###  Grafana Dashboard
 
 ![Grafana](images/grafana.png)
 
@@ -281,9 +246,9 @@ Nsflix/
 
 # 👨‍💻 Author
 
-**Niral Hedau**
+**Niral Dilip Hedau**
 
-PG-DITISS | CDAC
+PGCP-ITISS | CDAC, IACSD
 
 DevSecOps | Cloud | Kubernetes | AWS | Docker | Jenkins
 
